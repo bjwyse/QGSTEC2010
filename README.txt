@@ -1,49 +1,46 @@
-Question Generation Shared Task & Evaluation Challenge (QGSTEC) 2010 Resources
+Question Generation Shared Task & Evaluation Challenge (QGSTEC) 2010 - 
+Generating Questions from Sentences
+====================================================================
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+The data in this corpus are released under a Creative Commons Attribution-NonCommercial-ShareAlike 2.0 UK licence: England & Wales (http://creativecommons.org/licenses/by-nc-sa/2.0/uk/)
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+CONTENTS of QGSTEC-Sentences-2010.zip
+=====================================
+
+- README.txt
+- QGSTEC_INLG2010Proceedings.pdf
+- InstructionsParticipants_QGfromSentences.pdf
+- DevelopmentData_QuestionsFromSentences.xml
+- TestData_QuestionsFromSentences.xml
+- evaluation.xsl
+- TestDataSummary.xls
+
+
+Short description
+=================
+
+A corpus of over 1000 questions (both human and machine generated). The automatically generated questions have been rated by several raters according to five criteria (relevance, question type, syntactic correctness and fluency, ambiguity, and variety).
+
 
 Summary
 =======
-The first Question Generation Shared Task & Evaluation Challenge took
-place in 2010. The purpose of the challenge was to advance research
-in the Natural Language Processing and Generation sub-field of 
-Question Generation (QG). The files in this archive are the resources
-used in that challenge including final submissions and ratings.
 
-Task B Contents
-===============
+The 1st Question Generation Shared Task & Evaluation Challenge took place in 2010 as part of the Third Workshop on Question Generation (http://www.questiongeneration.org/QG2010/). The aim of the challenge was to advance research on Question Generation (QG). The challenge consisted of two tasks: (A) Generation of Questions from Paragraphs, and (B) Generation of Questions from Single Sentences. The tasks are described in more detail in QGSTEC_INLG2010Proceedings.pdf. A description of the five systems that participated in the tasks can be found in the Proceedings of QG Workshop (http://oro.open.ac.uk/22343/). The current corpus consists of the data resulting from task (B), Question Generation from Sentences (extracted from three resources: OpenLearn, Wikipedia and Yahoo Answers). The original description of this task for the participating teams is provided in InstructionsParticipants_QGfromSentences.pdf.
 
-Task B was a task to generate questions from one single sentence.
-The task consisted of an initial development data set release to
-allow participants to set up their systems and to get an idea as to
-how the challenge would be carried out. This initial data set is
-available in the DevData folder.
 
-The XML format in the TestData folder is the finalised format which
-includes tags for raters and their ratings. Also included in this
-folder is the XSLT file used to translate the ratings into a table.
+Task B: Generation from Sentences
+=================================
 
-The table was exported to Excel to calculate various results. There
-are three spreadsheets which varying degrees of information presented.
+Systems that took part in this task were required to generate questions from single sentences. The participating teams were provided with an initial development data set (DevelopmentData_QuestionsFromSentences.xml) indicative of test data (TestData_QuestionsFromSentences.xml). 
 
-The XML schema consisted of a root 'dataset' element with a child element
-called 'instance' for each test instance. The 'text' element contained
-the input to the QG system and the 'targetQuestionType' element specified
-the question type to be generated.
+Both development and test data are in XML format. For the test data, the XML schema consisted of a root 'dataset' element with a child element called 'instance' for each test instance. The 'text' element contained
+the input to the QG system and the 'targetQuestionType' element specified the question type to be generated. Participant's submissions (anonymised as a, b, c, and d) are in the 'submission' element with the corresponding ratings for the quality of the generated questions (with multiple raters). The criteria associated with the ratings are described in InstructionsParticipants_QGfromSentences.pdf and QGSTEC_INLG2010Proceedings.pdf.
 
-Participant's submissions are in the 'submission' element with the corresponding
-ratings according to the various criteria as attributes.
+
+Also included in this folder is the XSLT file used to translate the ratings into a table (evaluation.xsl). The table was exported to MS Excel to calculate various results. There is a spreadsheet (TestDataSummary.xls) which provides a view on the test data and results.
+
 
 Example:
 ----------------------------------------------------------------------------------
@@ -66,4 +63,16 @@ Example:
 </instance>
 ----------------------------------------------------------------------------------
 
-For further information on QGSTEC2010 and these resources, contact: Brendan Wyse <bjwyse@gmail.com>
+
+ACKNOWLEDGEMENTS
+================
+
+We are grateful to a number of people who contributed to the success of Task B at the First Shared Task Evaluation Challenge on Question Generation: Vasile Rus, Rodney Nielsen, Amanda Stent, Arthur Graesser, Jose Otero, James Lester. The initial task specification was discussed at the Open University's Natural Language Generation Group meeting - we benefitted from the feedback there specifically from Richard Power and Sandra Williams. The participating teams at the Universities of Lethbridge, Saarland and DFKI, Jadavpur and Wolverhampton kindly gave permission to use the results of their systems and provided rating data. Also, we would like to thank the Engineering and Physical Sciences Research Council who partially supported the effort on Task B through grant EP/G020981/1 (awarded to Paul Piwek). 
+
+
+CONTACT INFORMATION
+===================
+
+Brendan Wyse <bjwyse@gmail.com>
+Paul Piwek <p.piwek@open.ac.uk> (Centre for Research in Computing, The Open University, UK)
+Svetlana Stoyanchev <s.stoyanchev.ac.uk> (Centre for Research in Computing, The Open University, UK)
